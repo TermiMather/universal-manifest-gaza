@@ -206,6 +206,83 @@
       .rtl nav a {
         /* In RTL, we want to preserve left/right border radius of nav items */
       }
+
+      /* Video container for responsive embeds */
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        margin-top: 1rem;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      /* Placeholder style for testimonials section */
+      .video-placeholder {
+        padding: 1rem;
+        text-align: center;
+        font-style: italic;
+        color: #6b7280;
+        border: 1px dashed #d1d5db;
+        border-radius: 8px;
+        background-color: #fafafa;
+        margin-top: 1rem;
+      }
+
+      /* Sponsor form styles */
+      .sponsor-form {
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+      .sponsor-form .form-group {
+        margin-bottom: 1rem;
+      }
+      .sponsor-form label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+      }
+      .sponsor-form input,
+      .sponsor-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      .sponsor-form button {
+        margin-top: 0.5rem;
+      }
+
+      /* Highlight the sponsorship section */
+      #sponsorship.content-section {
+        background-color: #eafaf0;
+        border-left: 6px solid #0a9396;
+      }
+
+      /* Floating WhatsApp button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      .whatsapp-float img {
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
@@ -216,6 +293,7 @@
         <a href="#manifesto" id="nav-manifesto"></a>
         <a href="#charter" id="nav-charter"></a>
         <a href="#sponsorship" id="nav-sponsorship"></a>
+        <a href="#testimonials" id="nav-testimonials"></a>
         <a href="#spiritual" id="nav-spiritual"></a>
       </nav>
       <div class="language-switch">
@@ -241,6 +319,10 @@
     <footer>
       <p id="footer-tagline"></p>
     </footer>
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/213699974630" class="whatsapp-float" target="_blank">
+      <img src="https://img.icons8.com/color/64/000000/whatsapp.png" alt="WhatsApp" />
+    </a>
     <script>
       /* Translation and content definitions */
       const translations = {
@@ -253,6 +335,7 @@
             manifesto: "Manifeste",
             charter: "Charte",
             sponsorship: "Parrainage",
+            testimonials: "Témoignages",
             spiritual: "Poèmes spirituels",
           },
           heroTitle: "Manifeste universel pour Gaza",
@@ -265,6 +348,7 @@
             { id: "manifesto", heading: "Manifeste", tagline: "L'appel universel pour tous les opprimés" },
             { id: "charter", heading: "Charte d'engagement", tagline: "Engagements concrets pour agir" },
             { id: "sponsorship", heading: "Programme de parrainage", tagline: "Soutien direct aux familles de Gaza" },
+            { id: "testimonials", heading: "Témoignages", tagline: "Nous écoutons les voix de ceux qui vivent la réalité" },
             { id: "spiritual", heading: "Poèmes spirituels", tagline: "Notre élan spirituel en mots" },
           ],
           tagline:
@@ -298,6 +382,14 @@
               heading: "Programme de parrainage familial",
               text:
                 "Nom : مشروع الإغاثة العائلية في غزة\nObjectif : mettre en relation des familles gazaouies avec des parrains/marraines du monde entier pour un soutien humain, financier ou moral direct.\nDescription : Chaque parrain/marraine est connecté via WhatsApp à une famille de Gaza, sous la coordination d’un contact basé en Turquie et d’un responsable local à Gaza. La transparence et la confidentialité sont assurées, sans intermédiaire d’ONG.",
+              form:
+                `<form class="sponsor-form" action="mailto:info@example.com" method="POST" enctype="text/plain">\n  <div class="form-group">\n    <label for="name">Nom :</label>\n    <input type="text" id="name" name="name" required>\n  </div>\n  <div class="form-group">\n    <label for="email">Email :</label>\n    <input type="email" id="email" name="email" required>\n  </div>\n  <div class="form-group">\n    <label for="phone">Téléphone :</label>\n    <input type="tel" id="phone" name="phone">\n  </div>\n  <div class="form-group">\n    <label for="message">Message :</label>\n    <textarea id="message" name="message" rows="4"></textarea>\n  </div>\n  <button type="submit" class="btn btn-primary">Envoyer</button>\n</form>`,
+            },
+            {
+              id: "testimonials",
+              heading: "Témoignages",
+              html:
+                `<div class="video-placeholder">Ajoutez vos vidéos reçues de Gaza pour enrichir cette section.</div>`,
             },
             {
               id: "spiritual",
@@ -317,6 +409,7 @@
             manifesto: "Manifesto",
             charter: "Charter",
             sponsorship: "Sponsorship",
+            testimonials: "Testimonials",
             spiritual: "Spiritual Texts",
           },
           heroTitle: "Universal Manifesto for Gaza",
@@ -329,6 +422,7 @@
             { id: "manifesto", heading: "Manifesto", tagline: "The universal call for all the oppressed" },
             { id: "charter", heading: "Commitment Charter", tagline: "Concrete commitments for action" },
             { id: "sponsorship", heading: "Sponsorship Program", tagline: "Direct support to families in Gaza" },
+            { id: "testimonials", heading: "Testimonials", tagline: "Listening to the voices of those living the reality" },
             { id: "spiritual", heading: "Spiritual Texts", tagline: "Our spiritual impetus in words" },
           ],
           tagline:
@@ -362,6 +456,14 @@
               heading: "Family Sponsorship Program",
               text:
                 "Name: Family Relief Project in Gaza (مشروع الإغاثة العائلية في غزة)\nPurpose: connect families in Gaza with sponsors from around the world for direct human, financial or moral support.\nDescription: Each sponsor is connected via WhatsApp to a family in Gaza, coordinated by a contact in Turkey and a local manager in Gaza. Transparency and confidentiality are assured, without NGO intermediaries.",
+              form:
+                `<form class="sponsor-form" action="mailto:info@example.com" method="POST" enctype="text/plain">\n  <div class="form-group">\n    <label for="name">Name:</label>\n    <input type="text" id="name" name="name" required>\n  </div>\n  <div class="form-group">\n    <label for="email">Email:</label>\n    <input type="email" id="email" name="email" required>\n  </div>\n  <div class="form-group">\n    <label for="phone">Phone:</label>\n    <input type="tel" id="phone" name="phone">\n  </div>\n  <div class="form-group">\n    <label for="message">Message:</label>\n    <textarea id="message" name="message" rows="4"></textarea>\n  </div>\n  <button type="submit" class="btn btn-primary">Send</button>\n</form>`,
+            },
+            {
+              id: "testimonials",
+              heading: "Testimonials",
+              html:
+                `<div class="video-placeholder">Add your videos from Gaza here to enrich this section.</div>`,
             },
             {
               id: "spiritual",
@@ -381,6 +483,7 @@
             manifesto: "البيان",
             charter: "الميثاق",
             sponsorship: "برنامج الإغاثة",
+            testimonials: "الشهادات",
             spiritual: "نصوص روحية",
           },
           heroTitle: "بيان عالمي لغزة",
@@ -393,6 +496,7 @@
             { id: "manifesto", heading: "البيان", tagline: "النداء العالمي لكل المظلومين" },
             { id: "charter", heading: "الميثاق", tagline: "التزامات ملموسة للعمل" },
             { id: "sponsorship", heading: "برنامج الإغاثة", tagline: "دعم مباشر لعائلات غزة" },
+            { id: "testimonials", heading: "الشهادات", tagline: "الاستماع إلى أصوات الذين يعيشون الواقع" },
             { id: "spiritual", heading: "نصوص روحية", tagline: "اندفاعنا الروحي بالكلمات" },
           ],
           tagline:
@@ -426,6 +530,14 @@
               heading: "برنامج الإغاثة العائلية",
               text:
                 "الاسم: مشروع الإغاثة العائلية في غزة\nالغرض: ربط عائلات غزة بكفلاء من جميع أنحاء العالم لتقديم دعم إنساني ومالي أو معنوي مباشر.\nالوصف: يتم ربط كل كفيل بعائلة في غزة عبر واتساب تحت إشراف متواصل من جهة اتصال في تركيا ومسؤول محلي في غزة لضمان الشفافية والسرية دون تدخل المنظمات.",
+              form:
+                `<form class="sponsor-form" action="mailto:info@example.com" method="POST" enctype="text/plain">\n  <div class="form-group">\n    <label for="name">الاسم:</label>\n    <input type="text" id="name" name="name" required>\n  </div>\n  <div class="form-group">\n    <label for="email">البريد الإلكتروني:</label>\n    <input type="email" id="email" name="email" required>\n  </div>\n  <div class="form-group">\n    <label for="phone">الهاتف:</label>\n    <input type="tel" id="phone" name="phone">\n  </div>\n  <div class="form-group">\n    <label for="message">رسالة:</label>\n    <textarea id="message" name="message" rows="4"></textarea>\n  </div>\n  <button type="submit" class="btn btn-primary">إرسال</button>\n</form>`,
+            },
+            {
+              id: "testimonials",
+              heading: "الشهادات",
+              html:
+                `<div class="video-placeholder">أضف مقاطع الفيديو الخاصة بك من غزة هنا لتعزيز هذه القسم.</div>`,
             },
             {
               id: "spiritual",
@@ -450,6 +562,11 @@
         document.getElementById('nav-manifesto').textContent = t.nav.manifesto;
         document.getElementById('nav-charter').textContent = t.nav.charter;
         document.getElementById('nav-sponsorship').textContent = t.nav.sponsorship;
+        // Update testimonials navigation text
+        const navTestimonials = document.getElementById('nav-testimonials');
+        if (navTestimonials) {
+          navTestimonials.textContent = t.nav.testimonials;
+        }
         document.getElementById('nav-spiritual').textContent = t.nav.spiritual;
         // Update hero
         document.getElementById('hero-title').textContent = t.heroTitle;
@@ -483,11 +600,13 @@
           const h2 = document.createElement('h2');
           h2.textContent = section.heading;
           sec.appendChild(h2);
+          // Insert plain text if provided
           if (section.text) {
             const p = document.createElement('p');
             p.textContent = section.text;
             sec.appendChild(p);
           }
+          // Insert list items if provided
           if (section.list) {
             const ul = document.createElement('ul');
             ul.className = 'charter-list';
@@ -503,6 +622,18 @@
               ul.appendChild(li);
             });
             sec.appendChild(ul);
+          }
+          // Insert raw HTML if provided (e.g., videos placeholder)
+          if (section.html) {
+            const htmlContainer = document.createElement('div');
+            htmlContainer.innerHTML = section.html;
+            sec.appendChild(htmlContainer);
+          }
+          // Insert sponsorship form if provided
+          if (section.form) {
+            const formContainer = document.createElement('div');
+            formContainer.innerHTML = section.form;
+            sec.appendChild(formContainer);
           }
           content.appendChild(sec);
         });
