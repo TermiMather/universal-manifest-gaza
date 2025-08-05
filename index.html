@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manifeste universel pour Gaza</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+      }
+      header {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      select {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      /* Adjust direction for Arabic */
+      .rtl {
+        direction: rtl;
+        text-align: right;
+      }
+      .ltr {
+        direction: ltr;
+        text-align: left;
+      }
+      a.pdf-link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #007acc;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      a.pdf-link:hover {
+        background-color: #005a99;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="page-title"></h1>
+      <div>
+        <label for="language-selector">Langue / Language / اللغة</label>
+        <select id="language-selector">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+    </header>
+    <main id="content"></main>
+    <script>
+      const translations = {
+        fr: {
+          dir: "ltr",
+          title: "Manifeste universel pour Gaza",
+          sections: [
+            {
+              heading: "Manifeste",
+              text:
+                "Ce manifeste universel est né des souffrances endurées à Gaza. Nous, témoins silencieux, refusons la haine et nous engageons dans une patience active et non‑violente. Toute vie est sacrée; notre devoir est de nous tenir aux côtés des opprimés avec solidarité et humilité, sans récupération politique ni identitaire. Notre combat est d’abord intérieur : purifier notre intention, renforcer notre spiritualité et invoquer Celui qui détient toute justice. Que nos gestes soient des instruments de miséricorde, que nos actions soient tournées vers Allah, dans l’espoir d’un monde éclairé par Sa lumière. Un témoin.",
+            },
+            {
+              heading: "Charte d’engagement",
+              list: [
+                "Refuser la violence sous toutes ses formes, verbales ou physiques.",
+                "Pratiquer une solidarité active avec les opprimés, sans discrimination.",
+                "Se préserver de tout bénéfice personnel ou récupération politique.",
+                "Cultiver la patience, l’humilité et l’espoir lucide en Allah.",
+                "Engager des actions sincères pour le bien commun, en restant anonymes et libres de droits.",
+              ],
+            },
+            {
+              heading: "Invocation",
+              text:
+                "Ô Allah, Toi qui sais l’injustice et la souffrance, accorde‑nous des cœurs patients, des mains secourables et un espoir inébranlable. Purifie nos intentions, renforce notre résilience, fais de nous des instruments de miséricorde. Amîn.",
+            },
+            {
+              heading: "Programme de parrainage familial",
+              text:
+                "Nom : مشروع الإغاثة العائلية في غزة\nObjectif : mettre en relation des familles gazaouies avec des parrains/marraines du monde entier pour un soutien humain, financier ou moral direct.\nDescription : Chaque parrain/marraine est connecté via WhatsApp à une famille de Gaza, sous la coordination d’un contact basé en Turquie et d’un responsable local à Gaza. La transparence et la confidentialité sont assurées, sans intermédiaire d’ONG.",
+            },
+            {
+              heading: "Poèmes spirituels",
+              text:
+                "Quand le mal lève fièrement le front\net que la justice semble invisible aux yeux\nDieu choisit des cœurs purs parmi les mondes\nceux qui ne se montrent pas, mais qui se tiennent pour le bien.\n\nTu n'as pas besoin d'une épée ni d'un grand titre\nune parole de vérité ou un acte de bonté suffit pour la félicité\nla bonté se répand par des âmes qui ne fléchissent ni ne se ramollissent\nfermes dans la vérité, à chaque instant.\n\nEt si Dieu n'avait pas repoussé les gens les uns par les autres\nla terre aurait été corrompue et la lumière de leur sagesse perdue\nmais Sa grâce est immense et sans fin,\nIl préserve la terre par ceux qui marchent selon Sa guidance.\n\nSois donc une lumière quand l'obscurité règne\net un pont d'amour, non un mur de discorde\npeut-être que Dieu détournera le malheur des gens par toi\net que tu seras celui qui illumine l'espace.\n\nÔ héros de Gaza, crois-tu que l'entrée au Paradis soit facile ?\nDieu a dit dans Son livre :\n« Pensez-vous entrer au Paradis alors qu'il ne vous est pas encore venu ce qui est arrivé à ceux qui vous ont précédés… »\nMême les envoyés et les justes avant nous ont souffert, eu faim, eu peur et attendu la victoire de Dieu…\nIls disaient : « Quand viendra le secours de Dieu ? »\net la réponse est venue : « N'est-il pas vrai que le secours de Dieu est proche. »\n\nCe que tu vis aujourd'hui est la voie des prophètes, la voie de la patience et de la constance.\nEt toi, malgré ton jeune âge, tu es plus grand que beaucoup d'hommes par ta fermeté.\nDieu te voit, t'entend et prépare pour toi quelque chose de grand que tu ne vois pas encore.\nSois patient, et rappelle-toi que Dieu est avec les endurants et que l'aube est plus proche que nous ne l'imaginons.\n\nÔ Allah, facilite-nous le retour vers Toi et accorde-nous la douceur de Ta proximité jusqu'à ce que nous Te rencontrions et contemplions Ton regard.\nEt nous disons comme Tu l'as dit dans Ton livre : « Regardez-nous et écoutez »,\net louange à Allah, Seigneur des mondes.",
+            },
+          ],
+          pdf: "manifesto_trilingual.pdf",
+        },
+        en: {
+          dir: "ltr",
+          title: "Universal Manifesto for Gaza",
+          sections: [
+            {
+              heading: "Manifesto",
+              text:
+                "This universal manifesto is born from the suffering endured in Gaza. We, silent witnesses, reject hatred and choose active, non‑violent patience. Every life is sacred; our duty is to stand alongside the oppressed with solidarity and humility, without political or identity‑based appropriation. Our struggle begins within: purifying our intentions, strengthening our spirituality, and invoking the One who holds all justice. May our gestures be instruments of mercy, may our actions be directed toward Allah, in hope of a world illuminated by His light. A witness.",
+            },
+            {
+              heading: "Commitment Charter",
+              list: [
+                "Reject all forms of violence, verbal or physical.",
+                "Practice active solidarity with the oppressed, without discrimination.",
+                "Abstain from any personal gain or political appropriation.",
+                "Cultivate patience, humility and lucid hope in Allah.",
+                "Engage sincerely in actions for the common good, remaining anonymous and free of rights.",
+              ],
+            },
+            {
+              heading: "Invocation",
+              text:
+                "O Allah, You who know injustice and suffering, grant us patient hearts, hands that help, and unwavering hope. Purify our intentions, strengthen our resilience, and make us instruments of mercy. Ameen.",
+            },
+            {
+              heading: "Family Sponsorship Program",
+              text:
+                "Name: Family Relief Project in Gaza (مشروع الإغاثة العائلية في غزة)\nPurpose: connect families in Gaza with sponsors from around the world for direct human, financial or moral support.\nDescription: Each sponsor is connected via WhatsApp to a family in Gaza, coordinated by a contact in Turkey and a local manager in Gaza. Transparency and confidentiality are assured, without NGO intermediaries.",
+            },
+            {
+              heading: "Spiritual Texts",
+              text:
+                "When evil raises its proud forehead\nand justice seems invisible to the eye\nGod chooses pure hearts among all creation\nthose who do not show themselves, but stand up for goodness.\n\nYou do not need a sword or a lofty title\na word of truth or an act of kindness suffices in bliss\ngood spreads through souls that do not bend or soften\nsteadfast in truth, in every time.\n\nIf it were not that God repels people, one with another\nthe earth would be corrupted and the light of their wisdom lost\nbut His grace is vast and unending,\nHe preserves the earth through those who walk by His guidance.\n\nSo be a light when darkness prevails\nand a bridge of love, not a wall of hostility\nperhaps God will avert calamity from people through you\nand you will be the one who illuminates the heavens.\n\nO hero of Gaza, do you think entering Paradise is easy?\nGod said in His book:\n“Or do you think you will enter Paradise while there has not yet come to you the like of those who passed away before you…”\nEven the Messengers and the righteous before us suffered, hungered, feared and awaited the victory of God…\nThey said: “When is the victory of God?”\nand the answer came: “Indeed, the victory of God is near.”\n\nWhat you live today is the path of the prophets, the path of patience and steadfastness.\nAnd you, despite your youth, are greater than many men in your endurance.\nGod sees you, hears you, and stores up something great for you that you cannot yet see.\nBe patient, and remember that God is with the patient and that dawn is closer than we imagine.\n\nO Allah, make it easy for us to return to You, and grant us the sweetness of Your nearness until we meet You and gaze upon You.\nAnd we say as You said in Your book: “Look to us and listen,”\nand praise be to Allah, Lord of the worlds.",
+            },
+          ],
+          pdf: "manifesto_trilingual.pdf",
+        },
+        ar: {
+          dir: "rtl",
+          title: "بيان عالمي لغزة",
+          sections: [
+            {
+              heading: "البيان",
+              text:
+                "هذا البيان العالمي نشأ من المعاناة التي تكابدها غزة. نحن، الشهود الصامتون، نرفض الكراهية ونختار الصبر الفعال غير العنيف. إن كل حياة مقدسة؛ وواجبنا أن نقف إلى جانب المظلومين بالتضامن والتواضع، دون استغلال سياسي أو هوياتي. إن صراعنا يبدأ من داخل النفس: تطهير النية، وتعزيز الروحانية، ودعاء من يملك كل عدل. لتكن أفعالنا أدوات رحمة، ولتتوجه أعمالنا إلى الله، أملاً في عالم منير بنوره. شاهد.",
+            },
+            {
+              heading: "ميثاق الالتزام",
+              list: [
+                "رفض جميع أشكال العنف، لفظياً أو جسدياً.",
+                "ممارسة التضامن الفعال مع المظلومين بلا تمييز.",
+                "الامتناع عن أي منفعة شخصية أو استغلال سياسي.",
+                "تنمية الصبر والتواضع والأمل الواعي بالله.",
+                "الانخراط بصدق في أعمال الخير المشترك، مع البقاء مجهولين وبدون حقوق ملكية.",
+              ],
+            },
+            {
+              heading: "الدعاء",
+              text:
+                "يا الله، يا من تعلم بالظلم والمعاناة، امنحنا قلوباً صابرة وأيادي تعين وأملاً لا يتزعزع. طهر نياتنا، وعزز صمودنا، واجعلنا أدوات رحمة. آمين.",
+            },
+            {
+              heading: "برنامج الإغاثة العائلية",
+              text:
+                "الاسم: مشروع الإغاثة العائلية في غزة\nالغرض: ربط عائلات غزة بكفلاء من جميع أنحاء العالم لتقديم دعم إنساني ومالي أو معنوي مباشر.\nالوصف: يتم ربط كل كفيل بعائلة في غزة عبر واتساب تحت إشراف متواصل من جهة اتصال في تركيا ومسؤول محلي في غزة لضمان الشفافية والسرية دون تدخل المنظمات.",
+            },
+            {
+              heading: "نصوص روحية",
+              text:
+                "حين يعلو الشرُّ عاليَ الجبين\nوتغدو العدالةُ كأنها لا تُرى بالعين\nيختارُ اللهُ قلوبًا صافيةً من بين العالمين\nمَن لا يُظهِرون أنفسهم، لكنهم للخيرِ قائمين\n\nلستَ بحاجةٍ لسيفٍ أو لقبٍ عظيم\nكلمةُ حقٍّ، أو فعلُ خيرٍ، يكفي في النعيم\nينتشر الخيرُ بأرواحٍ لا تَميلُ ولا تَلين\nثابتين في الحقِّ، في كل حينٍ وحين\n\nولولا أن اللهَ يَصُدُّ الناسَ ببعضهم\nلفسدت الأرضُ، وضاع نورُ حكمتهم\nلكن فضلهُ عظيمٌ، لا ينتهي،\nيحفظ الأرضَ بمن يسيرونَ فيهِ على هَدي\n\nفكُن نورًا حين يعمُّ الظلام\nوجسرَ محبةٍ، لا حائطَ خصام\nفلعلَّ الله يدفعُ عن الناسِ بكَ البلاء\nوتكونَ أنت من يُنيرُ الفَضاء\n\nيا بطل غزة،\nهل تظنّ أن دخول الجنة سهل؟\nالله قال في كتابه:\n﴿ أَمْ حَسِبْتُمْ أَنْ تَدْخُلُوا الْجَنَّةَ وَلَمَّا يَأْتِكُمْ مَثَلُ الَّذِينَ خَلَوْا مِنْ قَبْلِكُمْ… ﴾\n\nحتى الرسل والصالحين قبلنا، تألموا، جاعوا، خافوا، وانتظروا نصر الله…\nوقالوا: “متى نصر الله؟”\nوجاءهم الجواب: “ألا إن نصر الله قريب.”\n\nما تعيشه أنت اليوم هو طريق الأنبياء، طريق الصبر والثبات.\nوأنت، رغم صغر سنّك، أكبر من كثير من الرجال بصمودك.\nالله يراك، يسمعك، ويدّخر لك شيئًا عظيمًا لا تراه الآن.\nفاصبر، واذكر أن الله مع الصابرين، وأن الفجر أقرب مما نتصوّر\n\nاللهم سهّل لنا الرجوع إليك، وارزقنا حلاوة قربك حتى لقائك ونظرتك.\nونقول كما قلت في كتابك: “انظرنا واسمعوا”،\nوالحمد لله ربّ العالمين.",
+            },
+          ],
+          pdf: "manifesto_trilingual.pdf",
+        },
+      };
+      function renderContent(lang) {
+        const translation = translations[lang] || translations.fr;
+        document.documentElement.lang = lang;
+        document.body.className = translation.dir === 'rtl' ? 'rtl' : 'ltr';
+        const pageTitle = document.getElementById('page-title');
+        pageTitle.textContent = translation.title;
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '';
+        translation.sections.forEach((section) => {
+          const sec = document.createElement('section');
+          const h2 = document.createElement('h2');
+          h2.textContent = section.heading;
+          sec.appendChild(h2);
+          if (section.text) {
+            const p = document.createElement('p');
+            section.text.split('\n').forEach((line, idx) => {
+              const span = document.createElement('span');
+              span.textContent = line;
+              p.appendChild(span);
+              if (idx < section.text.split('\n').length - 1) p.appendChild(document.createElement('br'));
+            });
+            sec.appendChild(p);
+          }
+          if (section.list) {
+            const ul = document.createElement('ul');
+            section.list.forEach((item) => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              ul.appendChild(li);
+            });
+            sec.appendChild(ul);
+          }
+          contentDiv.appendChild(sec);
+        });
+        const pdfLink = document.createElement('a');
+        pdfLink.href = translation.pdf;
+        pdfLink.className = 'pdf-link';
+        pdfLink.setAttribute('download', 'manifesto_trilingual.pdf');
+        pdfLink.textContent = lang === 'ar' ? 'تحميل النسخة بصيغة PDF' : (lang === 'en' ? 'Download PDF version' : 'Télécharger la version PDF');
+        contentDiv.appendChild(pdfLink);
+      }
+      function detectLang() {
+        const navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (navLang.startsWith('en')) return 'en';
+        if (navLang.startsWith('ar')) return 'ar';
+        return 'fr';
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        const select = document.getElementById('language-selector');
+        const initialLang = detectLang();
+        select.value = initialLang;
+        renderContent(initialLang);
+        select.addEventListener('change', (e) => {
+          renderContent(e.target.value);
+        });
+      });
+    </script>
+  </body>
+</html>
